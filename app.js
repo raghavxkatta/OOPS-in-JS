@@ -3,17 +3,22 @@ function hex(r,g,b){
 }
 /* function to create a color object */
 function makeColor(r,g,b){
-    const color={}/* assigning empty object to color  */
+    const color={}/* this function makes us an object,it starts empty, but then we add some properties based off of arguments that we were provided then we add some methods and then we return that object and this is called a FACTORY FUNCTION  */
 color.r =r 
 color.g= g
 color.b = b
 color.rgb= function(){
-    console.log(this)/* we are simply printing this */
-
+    const { r, g, b } = this;   
+return `rgb(${r},${g},${b})`
+}
+color.hex= function hex(r,g,b){
+    const { r, g, b } = this; 
+    return(
+         '#' + ((1<<24)+(r<<16)+(g<<8)+b).toString(16).slice(1))/* this function converts colours written in hexadecimal into their rgb values */
+}
 return color
 }
 
 
 const firstColor= makeColor(35,255,150)
-firstColor.rgb()/* call the rgb to print the color object */
-}
+firstColor.hex() 
