@@ -20,6 +20,17 @@ color.hex= function hex(r,g,b){
 return color
 }
 
+function Color(){
+    const o={}/* creates a blank plain JS object */
+    this.r=r
+    this.g=g
+    this.b=b
+    console.log(this)/* so if we don't use new we get a window object when we return o which is something we don't want, we want the proper object */
+    return o
+}
+
 
 const firstColor= makeColor(35,255,150)
 firstColor.hex() 
+
+
