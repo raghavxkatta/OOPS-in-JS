@@ -22,7 +22,7 @@ return color
 
 function Color(){
     const o={}/* Creates a blank plain JS object */
-    this.r=r/* Links (sets the constructor of) this object to another object*/
+    this.r=r/* Links (sets the con  structor of) this object to another object*/
     this.g=g/* Passes the newly created object from Step-1 as the this context */
     this.b=b/* Returns this if the function doesn't return it's own object */
     
@@ -44,3 +44,19 @@ return `rgba(${r},${g},${b},${a})`
 
 const color1= new Color(40,255,60)
 const color2= new Color(0,0,0)
+
+
+
+
+class Color{
+    constructor(r,g,b,name){/* constructor is a function which is executed immediately whenver a function is created */
+        /* and it automatically runs as long as the name is constructor */
+this.r=r/* these are going to be added as properties on this color object that we get returned */
+this.g=g
+this.b=b
+this.name=name
+
+    }
+    
+}
+const c1= new Color(255,67,89,'tomato')/* so you don't need to make an empty object the new keyword takes care of it c*/
