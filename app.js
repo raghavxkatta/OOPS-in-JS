@@ -71,25 +71,35 @@
 //     }
 //     const c1 = new Color(255, 67, 89, 'tomato')/* so you don't need to make an empty object the new keyword takes care of it c*/
 
-
-
-
-class Cat{
-    constructor(name,age){
-        this.name=name
-        this.age=age
+class Pet {
+    constructor(name, age) {
+        console.log('IN PET CONSTRUCTOR')
+        this.name = name
+        this.age = age
     }
-    eat(){
+    eat() {
         return `${this.name} is eating!`
     }
 }
 
-class Dog{
-    constructor(name,age){
-        this.name=name
-        this.age=age
+class Cat extends Pet {
+    constructor(name, age, livesLeft = 9) {
+        console.log('In Cat Constructor')
+        super(name, age)/* Super keyword basically references to the parent class for the properties and therefore reduces the amount of code that we would have to write without it */
+        this.livesLeft = this.livesLef
     }
-    eat(){
-        return `${this.name} is eating!`
+    meow() {
+        return 'meoww!!!'
+    }
+}
+
+
+
+class Dog extends Pet {
+    bark() {
+        return 'WOOF!!!'
+    }
+    eat() {
+        return `${this.name} scarfs his food`/* this would get more priority in comparison to the parent class eat() */
     }
 }
