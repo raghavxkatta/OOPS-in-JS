@@ -63,7 +63,9 @@ class Color {
     rgb() {
     return `rgb(${this.innerRGB()})`
     }
-
+rgba(a=1.0){
+    return`rgba(${this.innerRGB()},${a})`
+}
     hex() {
         return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1)
     }
