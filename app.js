@@ -86,7 +86,7 @@ class Cat extends Pet {
     constructor(name, age, livesLeft = 9) {
         console.log('In Cat Constructor')
         super(name, age)/* Super keyword basically references to the parent class for the properties and therefore reduces the amount of code that we would have to write without it */
-        this.livesLeft = this.livesLef
+        this.livesLeft = this.livesLeft
     }
     meow() {
         return 'meoww!!!'
